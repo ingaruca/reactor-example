@@ -2,6 +2,8 @@ package com.ingarucadev;
 
 import com.ingarucadev.model.Persona;
 import com.ingarucadev.operador.creacion.Creacion;
+import com.ingarucadev.operador.filtrado.Filter;
+import com.ingarucadev.operador.transformacion.Transformacion;
 import io.reactivex.Observable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -65,7 +67,9 @@ public class DemoReactorApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    Creacion app = new Creacion();
-    app.repeat();
+    //Creacion app = new Creacion();
+    //Transformacion app = new Transformacion();
+    Filter app = new Filter();
+    app.skipLast();
   }
 }
